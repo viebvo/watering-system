@@ -87,7 +87,6 @@ void loop() {
             while ((!readPot(W_VCC[i], W_read[i])) && readReservoir()) {
               // wait until sensor tells full condition
               Serial.print(".");
-              delay (1000);
               checkRuntimeSecs++;
               if (checkRuntimeSecs > W_runtime[i]) {
                 // if we have exceeded the maximum runtime
